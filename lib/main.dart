@@ -19,70 +19,76 @@ class MainApp extends StatelessWidget {
 
           leading: Icon(Icons.arrow_back),
         ),
-        body: Column(
-          children: [
-            SizedBox(height: 10),
-            Row(
+        body: SafeArea(
+          child: Container(
+            color: Colors.white,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Expanded(
-                  flex: 6,
-                  child: Container(
-                    height: 100,
-                    color: Colors.redAccent,
-                    child: Center(child: Text("22CSE019")),
-                  ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        height: 80,
+                        color: Colors.redAccent,
+                        child: Center(child: Text("22CSE019")),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        height: 80,
+                        color: Colors.green,
+                        child: Center(child: Text("B+")),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        height: 80,
+                        color: Colors.blue,
+                        child: Center(child: Text("Barishal")),
+                      ),
+                    ),
+                  ],
                 ),
+            
                 Expanded(
-                  flex: 2,
-                  child: Container(
-                    height: 100,
-                    color: Colors.green,
-                    child: Center(child: Text("B+")),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    height: 100,
-                    color: Colors.blue,
-                    child: Center(child: Text("Barishal")),
-                  ),
-                ),
-              ],
-            ),
-
-            Expanded(
-              child: Center(
-                child: Container(
-                  width: 250,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
+                  child: Center(
+                    child: Container(
+                      width: 250,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                      ),
+                      child: Center(child: Text("110-019-22")),
                     ),
                   ),
-                  child: Center(child: Text("110-019-22")),
                 ),
-              ),
-            ),
-
-            Align(
-              alignment: Alignment.bottomRight,
-              child: Container(
-                width: 80,
-                height: 80,
-                decoration: BoxDecoration(
-                  color: Colors.purpleAccent,
-                  borderRadius: BorderRadius.circular(50),
+            
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.purpleAccent,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: Center(child: Text("Sharna")),
+                  ),
                 ),
-                child: Center(child: Text("Sharna")),
-              ),
+            
+                SizedBox(height: 10),
+              ],
             ),
-
-            SizedBox(height: 10),
-          ],
+          ),
         ),
       ),
     );
